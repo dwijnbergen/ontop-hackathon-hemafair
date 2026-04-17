@@ -1,0 +1,9 @@
+[PrefixDeclaration]
+:        http://example.org/
+foaf:     http://xmlns.com/foaf/0.1/
+
+[MappingDeclaration] @collection [[
+mappingId   artemis_dataproperties
+target      :astronaut_{id} a foaf:Person ; foaf:firstName {first_name}^^xsd:string ; foaf:lastName {last_name}^^xsd:string .
+source      SELECT id, first_name, last_name FROM artemis
+]]
