@@ -1,0 +1,4 @@
+jdbc
+input/*.db
+input/*.ttl
+input/*.owl
