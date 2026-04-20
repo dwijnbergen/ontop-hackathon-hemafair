@@ -3,7 +3,13 @@
 foaf:     http://xmlns.com/foaf/0.1/
 
 [MappingDeclaration] @collection [[
-mappingId   artemis_dataproperties
+mappingId   astronaut_dataproperties
 target      :astronaut_{id} a foaf:Person ; foaf:firstName {first_name}^^xsd:string ; foaf:lastName {last_name}^^xsd:string .
-source      SELECT id, first_name, last_name FROM artemis
+source      SELECT id, first_name, last_name FROM astronauts
+]]
+
+[MappingDeclaration] @collection [[
+mappingId   mission_dataproperties
+target      :mission_{id} a foaf:Mission ; foaf:name {mission_name}^^xsd:string .
+source      SELECT id, mission_name FROM missions
 ]]

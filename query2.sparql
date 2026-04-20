@@ -1,0 +1,5 @@
+[MappingDeclaration] @collection [[
+mappingId   astronaut_dataproperties
+target      :astronaut_{id} a foaf:Person ; foaf:firstName {first_name}^^xsd:string ; foaf:lastName {last_name}^^xsd:string .
+source      SELECT id, first_name, last_name FROM astronauts
+]]

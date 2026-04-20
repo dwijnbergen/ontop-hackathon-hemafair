@@ -1,0 +1,8 @@
+id, astronaut_id, mission_id, role_name
+1, 1, 1, Commander
+2, 2, 1, Pilot
+3, 3, 1, Mission Specialist
+4, 4, 1, Mission Specialist
+5, 5, 2, Mission Commander
+6, 6, 2, Lunar Module Pilot
+7, 7, 2, Command Module Pilot
