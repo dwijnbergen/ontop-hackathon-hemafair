@@ -1,22 +1,28 @@
 [PrefixDeclaration]
-: http://example.org/
-foaf: http://xmlns.com/foaf/0.1/
-sio: http://semanticscience.org/resource/
+:           http://example.org/
+foaf:       http://xmlns.com/foaf/0.1/
+sio:        http://semanticscience.org/resource/
 
 [MappingDeclaration] @collection [[
 mappingId   astronaut_dataproperties
-target      :astronaut_{id} a foaf:Person ; foaf:firstName {first_name}^^xsd:string ; foaf:lastName {last_name}^^xsd:string ; sio:SIO_000228 :role_{role_id} .
+target      :astronaut_{id} a foaf:Person ;
+            foaf:firstName {first_name}^^xsd:string ; 
+            foaf:lastName {last_name}^^xsd:string ; 
+            sio:SIO_000228 :role_{role_id} .
 source      SELECT astronauts.id AS id, first_name, last_name, roles.id AS role_id FROM astronauts JOIN roles ON astronauts.id = roles.astronaut_id
 ]]
 
 [MappingDeclaration] @collection [[
 mappingId   mission_dataproperties
-target      :mission_{id} a :Mission ; foaf:name {mission_name}^^xsd:string .
+target      :mission_{id} a :Mission ; 
+            foaf:name {mission_name}^^xsd:string .
 source      SELECT id, mission_name FROM missions
 ]]
 
 [MappingDeclaration] @collection [[
 mappingId   roles_dataproperties
-target      :role_{id} a sio:SIO_000016 ; foaf:name {role_name}^^xsd:string ; sio:SIO_000356 :mission_{mission_id} .
+target      :role_{id} a sio:SIO_000016 ; 
+            foaf:name {role_name}^^xsd:string ; 
+            sio:SIO_000356 :mission_{mission_id} .
 source      SELECT id, astronaut_id, mission_id, role_name FROM roles
 ]]
