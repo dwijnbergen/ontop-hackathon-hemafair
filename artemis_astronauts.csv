@@ -1,8 +1,8 @@
-id, first_name, last_name
-1, Reid, Wiseman
-2, Victor, Glover
-3, Christina, Koch
-4, Jeremy, Hansen
-5, Neil, Armstrong
-6, Michael, Collins
-7, Buzz, Aldrin
+id,first_name,last_name,place_of_birth_name,place_of_birth_uri
+1,Reid,Wiseman,Baltimore,http://www.wikidata.org/entity/Q5092
+2,Victor,Glover,Pomona,http://www.wikidata.org/entity/Q486868
+3,Christina,Koch,Grand Rapids,http://www.wikidata.org/entity/Q184587
+4,Jeremy,Hansen,London,http://www.wikidata.org/entity/Q92561
+5,Neil,Armstrong,Wapakoneta,http://www.wikidata.org/entity/Q492796
+6,Michael,Collins,Rome,http://www.wikidata.org/entity/Q220
+7,Buzz,Aldrin,Glen Ridge,http://www.wikidata.org/entity/Q1003074
