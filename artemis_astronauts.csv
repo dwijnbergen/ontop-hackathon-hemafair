@@ -1,8 +1,8 @@
-id,first_name,last_name,place_of_birth_name,place_of_birth_uri
-1,Reid,Wiseman,Baltimore,http://www.wikidata.org/entity/Q5092
-2,Victor,Glover,Pomona,http://www.wikidata.org/entity/Q486868
-3,Christina,Koch,Grand Rapids,http://www.wikidata.org/entity/Q184587
-4,Jeremy,Hansen,London,http://www.wikidata.org/entity/Q92561
-5,Neil,Armstrong,Wapakoneta,http://www.wikidata.org/entity/Q492796
-6,Michael,Collins,Rome,http://www.wikidata.org/entity/Q220
-7,Buzz,Aldrin,Glen Ridge,http://www.wikidata.org/entity/Q1003074
+id,first_name,last_name,place_of_birth_name,place_of_birth_uri,birthdate
+1,Reid,Wiseman,Baltimore,http://www.wikidata.org/entity/Q5092,11-11-1975
+2,Victor,Glover,Pomona,http://www.wikidata.org/entity/Q486868,30-04-1976
+3,Christina,Koch,Grand Rapids,http://www.wikidata.org/entity/Q184587,29-01-1979
+4,Jeremy,Hansen,London,http://www.wikidata.org/entity/Q92561,27-01-1976
+5,Neil,Armstrong,Wapakoneta,http://www.wikidata.org/entity/Q492796,05-08-1930 
+6,Michael,Collins,Rome,http://www.wikidata.org/entity/Q220,31-10-1930
+7,Buzz,Aldrin,Glen Ridge,http://www.wikidata.org/entity/Q1003074,20-01-1930
