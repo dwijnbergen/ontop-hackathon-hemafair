@@ -1,6 +1,9 @@
+import os
 import duckdb
 
-with duckdb.connect("input/artemis.db") as con:
+database_file ="input/artemis.db"
+
+with duckdb.connect(database_file) as con:
     con.execute("""
         DROP TABLE IF EXISTS astronauts
     """)
@@ -15,17 +18,17 @@ with duckdb.connect("input/artemis.db") as con:
 
     con.execute("""
         CREATE TABLE IF NOT EXISTS astronauts AS
-        SELECT * FROM read_csv_auto('artemis_astronauts.csv')
+        SELECT * FROM read_csv_auto('csv_data/artemis_astronauts.csv')
     """)
 
     con.execute("""
         CREATE TABLE IF NOT EXISTS missions AS
-        SELECT * FROM read_csv_auto('artemis_missions.csv')
+        SELECT * FROM read_csv_auto('csv_data/artemis_missions.csv')
     """)
 
     con.execute("""
         CREATE TABLE IF NOT EXISTS roles AS
-        SELECT * FROM read_csv_auto('artemis_roles.csv')
+        SELECT * FROM read_csv_auto('csv_data/artemis_roles.csv')
     """)
 
     con.execute("""
@@ -38,3 +41,5 @@ with duckdb.connect("input/artemis.db") as con:
         print("\t".join(table[3]))
         print("\t".join(table[4]))
         print("")
+
+os.chmod(database_file, 0o777)
