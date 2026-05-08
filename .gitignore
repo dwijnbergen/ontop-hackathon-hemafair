@@ -1,4 +1,4 @@
-jdbc
+jdbc/*.jar
 input/*.db
 input/*.ttl
 input/*.owl

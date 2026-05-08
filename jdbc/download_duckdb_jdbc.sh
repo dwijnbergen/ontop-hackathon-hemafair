@@ -1,0 +1,1 @@
+wget https://repo1.maven.org/maven2/org/duckdb/duckdb_jdbc/1.5.2.0/duckdb_jdbc-1.5.2.0.jar
