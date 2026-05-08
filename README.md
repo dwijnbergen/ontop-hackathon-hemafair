@@ -18,7 +18,7 @@ Actives the python virtual environment.
 
 Creates a DuckDB database from the csv files.
 
-```download_duckdb_jdbc.sh``` (from the jdbc folder)
+```sh download_duckdb_jdbc.sh``` (from the jdbc folder)
 
 Downloads the DuckDB jdbc.
 
