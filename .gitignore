@@ -2,3 +2,4 @@ jdbc/*.jar
 input/*.db
 input/*.ttl
 input/*.owl
+ontop-py-env

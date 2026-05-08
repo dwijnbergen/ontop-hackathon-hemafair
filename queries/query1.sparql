@@ -1,9 +1,15 @@
 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ncit: <http://purl.obolibrary.org/obo/NCIT_>
 
 SELECT * WHERE {
   ?astronaut a foaf:Person .
   ?astronaut foaf:firstName ?first_name .
+  OPTIONAL{
   ?astronaut foaf:lastName ?last_name .
+  }
+  OPTIONAL{
+  ?astronaut ncit:C176764 ?place_Of_birth .
+  }
 }
