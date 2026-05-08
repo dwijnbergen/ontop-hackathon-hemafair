@@ -1,5 +1,5 @@
 # Ontop tutorial HemaFAIR
-Materials for Ontop tutorial
+Materials for the Ontop tutorial during the HemaFAIR Federated Learning Hackathon.
 
 ## Deployment (Linux)
 ```git clone https://github.com/dwijnbergen/ontop-hackathon-hemafair.git```
