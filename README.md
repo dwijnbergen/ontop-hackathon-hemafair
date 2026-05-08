@@ -1,4 +1,4 @@
-# ontop-hackathon-hemafair
+# Ontop tutorial HemaFAIR
 Materials for Ontop tutorial
 
 ## Deployment (Linux)
