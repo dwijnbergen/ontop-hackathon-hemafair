@@ -2,15 +2,15 @@ import duckdb
 
 with duckdb.connect("input/artemis.db") as con:
     con.execute("""
-        DROP TABLE astronauts
+        DROP TABLE IF EXISTS astronauts
     """)
 
     con.execute("""
-        DROP TABLE missions
+        DROP TABLE IF EXISTS missions
     """)
 
     con.execute("""
-        DROP TABLE roles
+        DROP TABLE IF EXISTS roles
     """)
 
     con.execute("""
