@@ -1,6 +1,35 @@
 # Ontop tutorial HemaFAIR
 Materials for the Ontop tutorial during the HemaFAIR Federated Learning Hackathon.
 
+## Data
+```mermaid
+erDiagram
+    ASTRONAUTS {
+        BIGINT id PK
+        VARCHAR first_name
+        VARCHAR last_name
+        VARCHAR place_of_birth_name
+        VARCHAR place_of_birth_uri
+        DATE birthdate
+    }
+
+    MISSIONS {
+        BIGINT id PK
+        VARCHAR mission_name
+    }
+
+    ROLES {
+        BIGINT id PK
+        BIGINT astronaut_id FK
+        BIGINT mission_id FK
+        VARCHAR role_name
+    }
+
+    ASTRONAUTS ||--o{ ROLES : "has role"
+    MISSIONS  ||--o{ ROLES : "is realized in"
+```
+
+
 ## Deployment (Linux)
 ```git clone https://github.com/dwijnbergen/ontop-hackathon-hemafair.git```
 
