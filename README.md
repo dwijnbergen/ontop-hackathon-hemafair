@@ -1,7 +1,7 @@
 # Ontop tutorial HemaFAIR
-Materials for the Ontop tutorial during the HemaFAIR Federated Learning Hackathon.
+Materials for the Ontop tutorial during the HemaFAIR Federated Learning Hackathon. During the tutorial, data from a small database will be mapped to RDF using Ontop and its mapping language OBDA.
 
-## Data
+## Source database model
 ```mermaid
 erDiagram
     ASTRONAUTS {
