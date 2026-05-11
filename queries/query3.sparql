@@ -1,0 +1,27 @@
+
+PREFIX sio: <http://semanticscience.org/resource/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ncit: <http://purl.obolibrary.org/obo/NCIT_>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT ?firstName ?lastName ?placeOfBirth ?placeOfBirthLabel ?population ?country ?countryLabel WHERE {
+    SERVICE <http://51.15.26.149:8080/sparql> {
+        ?astronaut a foaf:Person .
+        ?astronaut foaf:firstName ?firstName .
+        ?astronaut foaf:lastName ?lastName .
+        ?astronaut ncit:C176764 ?placeOfBirth .
+    }
+
+    SERVICE <https://qlever.cs.uni-freiburg.de/wikidata/sparql> {
+    	?placeOfBirth rdfs:label ?placeOfBirthLabel .
+    	?placeOfBirth wdt:P17 ?country .
+    	?country rdfs:label ?countryLabel .
+        ?placeOfBirth wdt:P1082 ?population .
+    
+        FILTER ( langMatches(lang(?placeOfBirthLabel), "en") )
+        FILTER ( langMatches(lang(?countryLabel), "en") )
+    }
+}
