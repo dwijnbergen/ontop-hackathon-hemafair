@@ -10,6 +10,9 @@ SELECT * WHERE {
   ?astronaut foaf:lastName ?last_name .
   }
   OPTIONAL{
+    ?astronaut ncit:C68615 ?birthdate .
+  }
+  OPTIONAL{
   ?astronaut ncit:C176764 ?place_Of_birth .
   }
 }
