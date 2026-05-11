@@ -3,7 +3,7 @@ services:
     image: ontop/ontop
     environment:
 #      ONTOP_ONTOLOGY_FILE: /opt/ontop/input/foaf.ttl
-      ONTOP_MAPPING_FILE: /opt/ontop/input/artemis.obda
+      ONTOP_MAPPING_FILE: /opt/ontop/obda/artemis.obda
       ONTOP_PROPERTIES_FILE: /opt/ontop/input/duckdb.properties
       ONTOP_CORS_ALLOWED_ORIGINS: "*"
       ONTOP_DEV_MODE: "true"
@@ -11,5 +11,6 @@ services:
     volumes:
       - ./input:/opt/ontop/input
       - ./jdbc:/opt/ontop/jdbc
+      - /home/shared/obda:/opt/ontop/obda
     ports:
       - "8080:8080"
